@@ -10,11 +10,14 @@ using OnlineStore.Data.Entities;
 
 namespace OnlineStore.Data
 {
-    public abstract class RepositoryBase<TEntity, TKey> : IRepository<TEntity, TKey>
-        where TEntity : EntityBase<TKey>
+    public abstract class RepositoryBase<TEntity, TKey> : IRepository<TEntity, TKey>, IDisposable
+        where TEntity : EntityBase<TKey> 
     {
         private readonly DbContext _dbContext;
         private readonly DbSet<TEntity> _dbSet;
+
+        // sadece bir kez dispose edilme kontrolü
+        private bool _disposed;
 
         public RepositoryBase(DbContext dbContext)
         {
@@ -22,6 +25,7 @@ namespace OnlineStore.Data
             _dbSet = _dbContext.Set<TEntity>();
         }
 
+        #region IRepository Members
         public void Add(TEntity entity)
         {
             _dbSet.Add(entity);
@@ -29,18 +33,19 @@ namespace OnlineStore.Data
 
         public void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Entry(entity).State = EntityState.Deleted;
         }
 
-        public void Delete(TKey id)
+        public async void Delete(TKey id)
         {
-            throw new NotImplementedException();
+            var entity = await GetAsync(id);
+            Delete(entity);
         }
 
         //order by yapmadan yani sıralamadan verilerde skip yapılamaz, entity framework hata verir.
         public IQueryable<TEntity> GetAll(int skip, int take)
         {
-            return _dbSet.OrderBy(q=> q.Id).Skip(skip).Take(take);
+            return _dbSet.OrderBy(q => q.Id).Skip(skip).Take(take);
         }
 
         public IQueryable<TEntity> GetAll(int skip, int take, Expression<Func<TEntity, bool>> predicate)
@@ -55,12 +60,35 @@ namespace OnlineStore.Data
 
         public Task SaveChangeAsync()
         {
-            throw new NotImplementedException();
+            return _dbContext.SaveChangesAsync();
         }
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Attach(entity);
+            _dbContext.Entry(entity).State = EntityState.Modified;
         }
+        #endregion
+
+        #region IDispossible Members
+        ~RepositoryBase()
+        {
+            Dispose(false);
+        }
+
+        //işlem sonrasında ilgili DbContext nesnesini siliyoruz.
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (disposing)
+                _dbContext.Dispose();
+            _disposed = true;
+        } 
+        #endregion
     }
 }
