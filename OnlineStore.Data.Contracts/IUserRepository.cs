@@ -8,6 +8,5 @@ namespace OnlineStore.Data.Contracts
 {
     public interface IUserRepository : IRepository<IUserRepository,int>
     {
-
     }
 }

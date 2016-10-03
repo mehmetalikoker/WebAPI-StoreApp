@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Core", "1 - Core", "{E0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Resource Access", "2 - Resource Access", "{78A5A45E-60B7-4FF9-8471-B531679EC622}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Data", "OnlineStore.Data\OnlineStore.Data.csproj", "{ED2400BA-8519-463A-B0AF-4FF0AD7D4B86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{4106D99F-5D07-435F-822C-E676ED6EBB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4106D99F-5D07-435F-822C-E676ED6EBB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4106D99F-5D07-435F-822C-E676ED6EBB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED2400BA-8519-463A-B0AF-4FF0AD7D4B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED2400BA-8519-463A-B0AF-4FF0AD7D4B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED2400BA-8519-463A-B0AF-4FF0AD7D4B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED2400BA-8519-463A-B0AF-4FF0AD7D4B86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +66,6 @@ Global
 		{FE3B3156-140B-49D2-8326-D06654FC2376} = {E0BCA097-3FE8-4920-8D83-FC3642F7010A}
 		{1713E564-0E05-4CFE-BF5D-62628A41CBBD} = {78A5A45E-60B7-4FF9-8471-B531679EC622}
 		{4106D99F-5D07-435F-822C-E676ED6EBB6B} = {78A5A45E-60B7-4FF9-8471-B531679EC622}
+		{ED2400BA-8519-463A-B0AF-4FF0AD7D4B86} = {78A5A45E-60B7-4FF9-8471-B531679EC622}
 	EndGlobalSection
 EndGlobal

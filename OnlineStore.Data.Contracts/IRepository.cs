@@ -21,7 +21,7 @@ namespace OnlineStore.Data.Contracts
 
         void Delete(TKey id);
 
-        void Delet(TEntity entity);
+        void Delete(TEntity entity);
 
         Task SaveChangeAsync();
     }
