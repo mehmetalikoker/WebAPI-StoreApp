@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Business.Contra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Business", "OnlineStore.Business\OnlineStore.Business.csproj", "{D4E8AA88-6EA2-4052-AED2-12F7E733995B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Hosting", "4 - Hosting", "{4A93740E-1F57-4606-B957-1C6D51AD9B63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.ServiceHost.API", "OnlineStore.ServiceHost.API\OnlineStore.ServiceHost.API.csproj", "{B08DD4CC-E793-4475-B2F5-784FAD745EBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,10 @@ Global
 		{D4E8AA88-6EA2-4052-AED2-12F7E733995B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4E8AA88-6EA2-4052-AED2-12F7E733995B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4E8AA88-6EA2-4052-AED2-12F7E733995B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B08DD4CC-E793-4475-B2F5-784FAD745EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B08DD4CC-E793-4475-B2F5-784FAD745EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B08DD4CC-E793-4475-B2F5-784FAD745EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B08DD4CC-E793-4475-B2F5-784FAD745EBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,5 +91,6 @@ Global
 		{ED2400BA-8519-463A-B0AF-4FF0AD7D4B86} = {78A5A45E-60B7-4FF9-8471-B531679EC622}
 		{BF2ADB99-5AA6-424C-8E54-8E8EDF25C17B} = {99967127-D957-482B-B6DD-8CD26C62EC7C}
 		{D4E8AA88-6EA2-4052-AED2-12F7E733995B} = {99967127-D957-482B-B6DD-8CD26C62EC7C}
+		{B08DD4CC-E793-4475-B2F5-784FAD745EBC} = {4A93740E-1F57-4606-B957-1C6D51AD9B63}
 	EndGlobalSection
 EndGlobal
