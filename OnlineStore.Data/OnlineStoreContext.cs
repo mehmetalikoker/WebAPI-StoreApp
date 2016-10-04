@@ -18,7 +18,6 @@ namespace OnlineStore.Data
         public OnlineStoreContext() 
             : base("OnlineStoreDbContext")
         {
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

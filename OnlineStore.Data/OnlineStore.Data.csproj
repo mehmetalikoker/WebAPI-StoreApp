@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data Repositories\CategoryRepository.cs" />
+    <Compile Include="Data Repositories\ProductRepository.cs" />
     <Compile Include="Data Repositories\UserRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OnlineStoreContext.cs" />

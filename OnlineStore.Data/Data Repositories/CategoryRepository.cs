@@ -1,18 +1,17 @@
 ﻿using OnlineStore.Data.Contracts;
+using OnlineStore.Data.Entities;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq.Expressions;
-using OnlineStore.Data.Entities;
+using System.Data.Entity;
 
 namespace OnlineStore.Data.Data_Repositories
 {
-    public class UserRepository : RepositoryBase<User, int>, IUserRepository
+    public class CategoryRepository : RepositoryBase<Category, int>, ICategoryRepository
     {
-        public UserRepository(DbContext dbContext)
+        public CategoryRepository(DbContext dbContext) 
             : base(dbContext)
         {
         }
