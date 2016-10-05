@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineStore.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,7 @@ namespace OnlineStore.ServiceHost.API
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            DependencyContainer.Bootstrap();
         }
     }
 }
