@@ -52,6 +52,14 @@
       <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -157,13 +165,37 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OnlineStore.Business.Contracts\OnlineStore.Business.Contracts.csproj">
+      <Project>{bf2adb99-5aa6-424c-8e54-8e8edf25c17b}</Project>
+      <Name>OnlineStore.Business.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineStore.Business\OnlineStore.Business.csproj">
+      <Project>{d4e8aa88-6ea2-4052-aed2-12f7e733995b}</Project>
+      <Name>OnlineStore.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineStore.Core.Common.Caching\OnlineStore.Core.Common.Caching.csproj">
+      <Project>{D49BBB3C-75FE-4B45-910D-E0DCD20A7AF9}</Project>
+      <Name>OnlineStore.Core.Common.Caching</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OnlineStore.Core.Common.Contracts\OnlineStore.Core.Common.Contracts.csproj">
       <Project>{d9eafde8-d4ba-4bfa-8130-cb9702f772e1}</Project>
       <Name>OnlineStore.Core.Common.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnlineStore.Core.Common.Logging\OnlineStore.Core.Common.Logging.csproj">
+      <Project>{fe3b3156-140b-49d2-8326-d06654fc2376}</Project>
+      <Name>OnlineStore.Core.Common.Logging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OnlineStore.Core\OnlineStore.Core.csproj">
       <Project>{77d5be6c-482c-4183-ade7-b2c45dce737b}</Project>
       <Name>OnlineStore.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineStore.Data.Contracts\OnlineStore.Data.Contracts.csproj">
+      <Project>{4106d99f-5d07-435f-822c-e676ed6ebb6b}</Project>
+      <Name>OnlineStore.Data.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineStore.Data\OnlineStore.Data.csproj">
+      <Project>{ed2400ba-8519-463a-b0af-4ff0ad7d4b86}</Project>
+      <Name>OnlineStore.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
