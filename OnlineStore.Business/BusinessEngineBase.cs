@@ -1,4 +1,7 @@
-﻿using OnlineStore.Core.Common.Contracts;
+﻿using AutoMapper;
+using OnlineStore.Core;
+using OnlineStore.Core.Common.Contracts;
+using OnlineStore.Core.Mappings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +12,22 @@ namespace OnlineStore.Business
 {
     public class BusinessEngineBase
     {
+        public IMapper Mapper;
         public IConfigurationHelper ConfigurationHelper;
         private readonly ILogger _logger;
 
         public BusinessEngineBase()
         {
-            // TODO: DI Framework eklendikden sonra bu field initialize edilecek..
+            var mapperConfiguration = new MapperConfiguration(cfg =>
+            {
+                RequestMessagesToEntities.Map(cfg);
+                EntitiesToResponseMessages.Map(cfg);
+            });
+
+            Mapper = mapperConfiguration.CreateMapper();
+            ConfigurationHelper = DependencyContainer.Resolve<IConfigurationHelper>();
+            _logger = (ILogger)DependencyContainer.Resolve(typeof(ILogger));
+
         }
 
         protected T ExecuteWithExceptionHandledOperation<T>(Func<T> func)
