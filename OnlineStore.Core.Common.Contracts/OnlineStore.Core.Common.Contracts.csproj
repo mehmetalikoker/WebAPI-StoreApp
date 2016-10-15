@@ -56,10 +56,17 @@
     <Compile Include="IConfigurationHelper.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseMessages\UserResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineStore.Data.Entities\OnlineStore.Data.Entities.csproj">
+      <Project>{1713E564-0E05-4CFE-BF5D-62628A41CBBD}</Project>
+      <Name>OnlineStore.Data.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,8 +12,8 @@ namespace OnlineStore.Business
 {
     public class BusinessEngineBase
     {
-        public IMapper Mapper;
-        public IConfigurationHelper ConfigurationHelper;
+        protected IMapper Mapper;
+        protected IConfigurationHelper ConfigurationHelper;
         private readonly ILogger _logger;
 
         public BusinessEngineBase()

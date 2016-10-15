@@ -4,10 +4,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OnlineStore.Core.Common.Contracts.ResponseMessages;
+using OnlineStore.Data.Contracts;
 
+/// <summary>
+/// Engine lerde respositoryler ile konuşacağız.
+/// </summary>
 namespace OnlineStore.Business
 {
     public class UserEngine : BusinessEngineBase, IUserEngine
     {
+        private readonly IUserRepository _userRepository;
+
+        public UserEngine(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
+        }
+
+        public Task<UserResponse> GetAsync(int id)
+        {
+            return base.ExecuteWithExceptionHandledOperation(async () =>
+            {
+                var user = await _userRepository.GetAsync(id);
+
+                // user entity sini user response çeviriyoruz.
+                return Mapper.Map<UserResponse>(user);
+            });
+        }
     }
 }

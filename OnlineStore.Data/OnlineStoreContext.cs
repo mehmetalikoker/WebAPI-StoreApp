@@ -23,6 +23,24 @@ namespace OnlineStore.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Product>()
+                .HasRequired(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId);
+
+
+            // user ile category arasındaki n to n  ilişki.
+            // userCategory tablosu yaratıp many to many ilişki yaratacagız.
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.AllowedCategories)
+                .WithMany(c => c.AssignedUsers)
+                .Map(mapping =>
+                {
+                    mapping.MapLeftKey("UserId");
+                    mapping.MapRightKey("CategoryId");
+                    mapping.ToTable("UserCategory");
+                });
         }
     }
 }

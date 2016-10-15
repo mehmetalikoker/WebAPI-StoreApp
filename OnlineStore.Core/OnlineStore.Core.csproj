@@ -63,6 +63,10 @@
       <Project>{d9eafde8-d4ba-4bfa-8130-cb9702f772e1}</Project>
       <Name>OnlineStore.Core.Common.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnlineStore.Data.Entities\OnlineStore.Data.Entities.csproj">
+      <Project>{1713E564-0E05-4CFE-BF5D-62628A41CBBD}</Project>
+      <Name>OnlineStore.Data.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

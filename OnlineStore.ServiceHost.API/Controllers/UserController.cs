@@ -1,13 +1,28 @@
-﻿using System;
+﻿using OnlineStore.Business.Contracts;
+using OnlineStore.Core.Common.Contracts.ResponseMessages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace OnlineStore.ServiceHost.API.Controllers
 {
     public class UserController : ApiController
     {
+        private readonly IUserEngine _userEngine;
+
+        public UserController(IUserEngine userEngine)
+        {
+            _userEngine = userEngine;
+        }
+
+        // Get metodu
+        public Task<UserResponse> Get(int id)
+        {
+            return _userEngine.GetAsync(id);
+        }
     }
 }
