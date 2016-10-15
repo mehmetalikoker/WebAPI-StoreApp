@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D9EAFDE8-D4BA-4BFA-8130-CB9702F772E1}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OnlineStore.Core.Common.Contracts</RootNamespace>
-    <AssemblyName>OnlineStore.Core.Common.Contracts</AssemblyName>
+    <RootNamespace>OnlineStore.Console</RootNamespace>
+    <AssemblyName>OnlineStore.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,7 +44,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,14 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiResponse.cs" />
-    <Compile Include="IBusinessEngine.cs" />
-    <Compile Include="ICacheProvider.cs" />
-    <Compile Include="IConfigurationHelper.cs" />
-    <Compile Include="ILogger.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestMessages\UserCreateRequest.cs" />
-    <Compile Include="ResponseMessages\UserResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -65,8 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OnlineStore.Data.Entities\OnlineStore.Data.Entities.csproj">
-      <Project>{1713E564-0E05-4CFE-BF5D-62628A41CBBD}</Project>
+      <Project>{1713e564-0e05-4cfe-bf5d-62628a41cbbd}</Project>
       <Name>OnlineStore.Data.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineStore.Data\OnlineStore.Data.csproj">
+      <Project>{ED2400BA-8519-463A-B0AF-4FF0AD7D4B86}</Project>
+      <Name>OnlineStore.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using OnlineStore.Business.Contracts;
+using OnlineStore.Core.Common.Contracts.RequestMessages;
 using OnlineStore.Core.Common.Contracts.ResponseMessages;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,11 @@ namespace OnlineStore.ServiceHost.API.Controllers
         public Task<UserResponse> Get(int id)
         {
             return _userEngine.GetAsync(id);
+        }
+
+        public Task<UserResponse> Post([FromBody]UserCreateRequest request)
+        {
+            return _userEngine.CreateAsync(request);
         }
     }
 }

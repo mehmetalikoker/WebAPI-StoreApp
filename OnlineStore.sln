@@ -15,21 +15,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Data.Entities",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Data.Contracts", "OnlineStore.Data.Contracts\OnlineStore.Data.Contracts.csproj", "{4106D99F-5D07-435F-822C-E676ED6EBB6B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Core", "1 - Core", "{E0BCA097-3FE8-4920-8D83-FC3642F7010A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Core Layer", "1 - Core Layer", "{E0BCA097-3FE8-4920-8D83-FC3642F7010A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Resource Access", "2 - Resource Access", "{78A5A45E-60B7-4FF9-8471-B531679EC622}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Data Access Layer", "2 - Data Access Layer", "{78A5A45E-60B7-4FF9-8471-B531679EC622}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Data", "OnlineStore.Data\OnlineStore.Data.csproj", "{ED2400BA-8519-463A-B0AF-4FF0AD7D4B86}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Business Logic Layer", "3- Business Logic Layer", "{99967127-D957-482B-B6DD-8CD26C62EC7C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Business Layer", "3- Business Layer", "{99967127-D957-482B-B6DD-8CD26C62EC7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Business.Contracts", "OnlineStore.Business.Contracts\OnlineStore.Business.Contracts.csproj", "{BF2ADB99-5AA6-424C-8E54-8E8EDF25C17B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Business", "OnlineStore.Business\OnlineStore.Business.csproj", "{D4E8AA88-6EA2-4052-AED2-12F7E733995B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Hosting", "4 - Hosting", "{4A93740E-1F57-4606-B957-1C6D51AD9B63}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Web API Layer", "4 - Web API Layer", "{4A93740E-1F57-4606-B957-1C6D51AD9B63}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.ServiceHost.API", "OnlineStore.ServiceHost.API\OnlineStore.ServiceHost.API.csproj", "{B08DD4CC-E793-4475-B2F5-784FAD745EBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Console", "5 - Console", "{A0EAD769-C966-4ADF-8AE8-8A97BFEF55F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Console", "OnlineStore.Console\OnlineStore.Console.csproj", "{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,10 @@ Global
 		{B08DD4CC-E793-4475-B2F5-784FAD745EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B08DD4CC-E793-4475-B2F5-784FAD745EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B08DD4CC-E793-4475-B2F5-784FAD745EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,5 +100,6 @@ Global
 		{BF2ADB99-5AA6-424C-8E54-8E8EDF25C17B} = {99967127-D957-482B-B6DD-8CD26C62EC7C}
 		{D4E8AA88-6EA2-4052-AED2-12F7E733995B} = {99967127-D957-482B-B6DD-8CD26C62EC7C}
 		{B08DD4CC-E793-4475-B2F5-784FAD745EBC} = {4A93740E-1F57-4606-B957-1C6D51AD9B63}
+		{131CB559-04B7-4DBF-B185-FBEFBA2CF59D} = {A0EAD769-C966-4ADF-8AE8-8A97BFEF55F7}
 	EndGlobalSection
 EndGlobal

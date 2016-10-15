@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OnlineStore.Core.Common.Contracts.RequestMessages;
 
 namespace OnlineStore.Business.Contracts
 {
     public interface IUserEngine : IBusinessEngine
     {
         Task<UserResponse> GetAsync(int id);
+        Task<UserResponse> CreateAsync(UserCreateRequest request);
     }
 }

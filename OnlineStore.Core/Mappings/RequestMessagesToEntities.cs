@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using OnlineStore.Core.Common.Contracts.RequestMessages;
+using OnlineStore.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,7 @@ namespace OnlineStore.Core.Mappings
     {
         public static void Map(AutoMapper.IMapperConfiguration mapperConfiguration)
         {
-            // TODO: Mapping ler tanımlanacak.
+            mapperConfiguration.CreateMap<UserCreateRequest, User>();
         }
     }
 }
