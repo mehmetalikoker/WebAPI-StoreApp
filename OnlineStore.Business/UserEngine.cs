@@ -10,7 +10,7 @@ using OnlineStore.Core.Common.Contracts.RequestMessages;
 using OnlineStore.Data.Entities;
 
 /// <summary>
-/// Engine lerde respositoryler ile konuşacağız.
+/// Engine içinde de respository yapısı ile konuşacağız.
 /// </summary>
 namespace OnlineStore.Business
 {
