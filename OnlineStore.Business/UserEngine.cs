@@ -23,6 +23,8 @@ namespace OnlineStore.Business
             _userRepository = userRepository;
         }
 
+
+        // Post
         public Task<UserResponse> CreateAsync(UserCreateRequest request)
         {
             return base.ExecuteWithExceptionHandledOperation(async () =>
@@ -37,6 +39,19 @@ namespace OnlineStore.Business
             });
         }
 
+
+        // Delete 
+        public Task DeleteAsync(int id)
+        {
+            return base.ExecuteWithExceptionHandledOperation(async () =>
+            {
+
+                await _userRepository.Delete(id);
+
+                await _userRepository.SaveChangeAsync();
+            });
+        }
+
         public Task<UserResponse> GetAsync(int id)
         {
             return base.ExecuteWithExceptionHandledOperation(async () =>
@@ -44,6 +59,22 @@ namespace OnlineStore.Business
                 var user = await _userRepository.GetAsync(id);
 
                 // user entity sini user response çeviriyoruz.
+                return Mapper.Map<UserResponse>(user);
+            });
+        }
+
+
+        // Put
+        public Task<UserResponse> UpdateAsync(UserUpdateRequest request)
+        {
+            return base.ExecuteWithExceptionHandledOperation(async () =>
+            {
+                var user = Mapper.Map<User>(request);
+
+                _userRepository.Update(user);
+
+                await _userRepository.SaveChangeAsync();
+
                 return Mapper.Map<UserResponse>(user);
             });
         }

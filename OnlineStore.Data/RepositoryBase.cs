@@ -36,7 +36,7 @@ namespace OnlineStore.Data
             _dbContext.Entry(entity).State = EntityState.Deleted;
         }
 
-        public async void Delete(TKey id)
+        public async Task Delete(TKey id)
         {
             var entity = await GetAsync(id);
             Delete(entity);
@@ -88,7 +88,9 @@ namespace OnlineStore.Data
             if (disposing)
                 _dbContext.Dispose();
             _disposed = true;
-        } 
+        }
+
+
         #endregion
     }
 }

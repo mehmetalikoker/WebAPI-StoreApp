@@ -30,5 +30,15 @@ namespace OnlineStore.ServiceHost.API.Controllers
         {
             return _userEngine.CreateAsync(request);
         }
+
+        public Task<UserResponse> Put([FromBody] UserUpdateRequest request)
+        {
+            return _userEngine.UpdateAsync(request);
+        }
+
+        public Task Delete(int id)
+        {
+            return _userEngine.DeleteAsync(id);
+        }
     }
 }

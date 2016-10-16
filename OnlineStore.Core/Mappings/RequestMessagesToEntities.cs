@@ -14,6 +14,7 @@ namespace OnlineStore.Core.Mappings
         public static void Map(AutoMapper.IMapperConfiguration mapperConfiguration)
         {
             mapperConfiguration.CreateMap<UserCreateRequest, User>();
+            mapperConfiguration.CreateMap<UserUpdateRequest, User>();
         }
     }
 }

@@ -13,5 +13,7 @@ namespace OnlineStore.Business.Contracts
     {
         Task<UserResponse> GetAsync(int id);
         Task<UserResponse> CreateAsync(UserCreateRequest request);
+        Task<UserResponse> UpdateAsync(UserUpdateRequest request);
+        Task DeleteAsync(int id);
     }
 }
