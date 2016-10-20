@@ -9,5 +9,6 @@ namespace OnlineStore.Business.Contracts
 {
     public interface ICategoryEngine : IBusinessEngine
     {
+        Task<CategoryResponse> GetAsync(int id);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineStore.Business.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,5 +10,11 @@ namespace OnlineStore.ServiceHost.API.Controllers
 {
     public class CategoryController : ApiController
     {
+        private readonly ICategoryEngine _categoryEngine;
+
+        public CategoryController(ICategoryEngine categoryEngine)
+        {
+            _categoryEngine = categoryEngine;
+        }
     }
 }
