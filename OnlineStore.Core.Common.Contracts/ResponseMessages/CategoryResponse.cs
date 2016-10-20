@@ -8,5 +8,6 @@ namespace OnlineStore.Core.Common.Contracts.ResponseMessages
 {
     public class CategoryResponse
     {
+
     }
 }
