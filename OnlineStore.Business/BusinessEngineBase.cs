@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OnlineStore.Core.Common.Contracts.ResponseMessages;
 
 namespace OnlineStore.Business
 {
@@ -58,6 +59,11 @@ namespace OnlineStore.Business
 
                 throw;
             }
+        }
+
+        internal Task<List<ProductResponse>> ExecuteWithExceptionHandledOperation(Func<Task<List<ProductResponse>>> p)
+        {
+            throw new NotImplementedException();
         }
     }
 }

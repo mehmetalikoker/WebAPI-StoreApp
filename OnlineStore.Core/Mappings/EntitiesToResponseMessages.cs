@@ -14,6 +14,7 @@ namespace OnlineStore.Core.Mappings
         public static void Map(IMapperConfiguration mapperConfiguration)
         {
             mapperConfiguration.CreateMap<User, UserResponse>();
+            mapperConfiguration.CreateMap<Category,CategoryResponse>();
         }
     }
 }

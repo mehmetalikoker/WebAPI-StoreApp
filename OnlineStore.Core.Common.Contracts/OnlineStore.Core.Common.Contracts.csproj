@@ -56,9 +56,14 @@
     <Compile Include="IConfigurationHelper.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestMessages\CategoryCreateRequest.cs" />
+    <Compile Include="RequestMessages\CategoryUpdateRequest.cs" />
+    <Compile Include="RequestMessages\ProductCreateRequest.cs" />
+    <Compile Include="RequestMessages\ProductUpdateRequest.cs" />
     <Compile Include="RequestMessages\UserCreateRequest.cs" />
     <Compile Include="RequestMessages\UserUpdateRequest.cs" />
     <Compile Include="ResponseMessages\CategoryResponse.cs" />
+    <Compile Include="ResponseMessages\ProductResponse.cs" />
     <Compile Include="ResponseMessages\UserResponse.cs" />
   </ItemGroup>
   <ItemGroup>
