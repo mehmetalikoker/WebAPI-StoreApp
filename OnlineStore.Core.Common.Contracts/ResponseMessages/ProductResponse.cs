@@ -14,6 +14,5 @@ namespace OnlineStore.Core.Common.Contracts.ResponseMessages
         public string Name { get; set; }
         public int Price { get; set; }
         public int Rank { get; set; }
-
     }
 }
