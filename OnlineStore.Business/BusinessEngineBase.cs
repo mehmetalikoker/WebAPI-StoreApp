@@ -11,6 +11,9 @@ using OnlineStore.Core.Common.Contracts.ResponseMessages;
 
 namespace OnlineStore.Business
 {
+    /// <summary>
+    /// DI Frameworküne mapper,configuration,logger larımızı inject ediyoruz.
+    /// </summary>
     public class BusinessEngineBase
     {
         protected IMapper Mapper;
