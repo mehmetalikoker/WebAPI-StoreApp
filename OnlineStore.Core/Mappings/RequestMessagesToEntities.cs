@@ -17,6 +17,8 @@ namespace OnlineStore.Core.Mappings
             mapperConfiguration.CreateMap<UserUpdateRequest, User>();
             mapperConfiguration.CreateMap<CategoryCreateRequest, Category>();
             mapperConfiguration.CreateMap<CategoryUpdateRequest, Category>();
+            mapperConfiguration.CreateMap<ProductCreateRequest, Category>();
+            mapperConfiguration.CreateMap<ProductCreateRequest, Category>();
         }
     }
 }
