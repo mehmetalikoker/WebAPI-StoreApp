@@ -1,10 +1,12 @@
 ﻿using OnlineStore.ServiceHost.API.Core;
+using OnlineStore.ServiceHost.API.Filters;
 using OnlineStore.ServiceHost.API.Handlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Dispatcher;
+using System.Web.Http.Filters;
 
 namespace OnlineStore.ServiceHost.API
 {
@@ -15,6 +17,9 @@ namespace OnlineStore.ServiceHost.API
             // Web API configuration and services
             config.MessageHandlers.Add(new ApiResponseHandler());
             config.Services.Replace(typeof(IHttpControllerActivator), new WindsorHttpControllerActivator());
+
+            // Filters
+            //config.Filters.Add(new JsonFormattersByMJ(new ));
 
             // Web API routes
             config.MapHttpAttributeRoutes();

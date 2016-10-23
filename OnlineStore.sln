@@ -35,6 +35,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Console", "5 - Console"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Console", "OnlineStore.Console\OnlineStore.Console.csproj", "{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Test", "OnlineStore.Test\OnlineStore.Test.csproj", "{A16F1AAB-C00F-46CC-941B-1BD9E38A2A6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Test", "6 - Test", "{D442BAF0-33E0-4BC5-BCF3-61915F8845CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +89,10 @@ Global
 		{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{131CB559-04B7-4DBF-B185-FBEFBA2CF59D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16F1AAB-C00F-46CC-941B-1BD9E38A2A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16F1AAB-C00F-46CC-941B-1BD9E38A2A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16F1AAB-C00F-46CC-941B-1BD9E38A2A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16F1AAB-C00F-46CC-941B-1BD9E38A2A6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,5 +109,6 @@ Global
 		{D4E8AA88-6EA2-4052-AED2-12F7E733995B} = {99967127-D957-482B-B6DD-8CD26C62EC7C}
 		{B08DD4CC-E793-4475-B2F5-784FAD745EBC} = {4A93740E-1F57-4606-B957-1C6D51AD9B63}
 		{131CB559-04B7-4DBF-B185-FBEFBA2CF59D} = {A0EAD769-C966-4ADF-8AE8-8A97BFEF55F7}
+		{A16F1AAB-C00F-46CC-941B-1BD9E38A2A6F} = {D442BAF0-33E0-4BC5-BCF3-61915F8845CB}
 	EndGlobalSection
 EndGlobal

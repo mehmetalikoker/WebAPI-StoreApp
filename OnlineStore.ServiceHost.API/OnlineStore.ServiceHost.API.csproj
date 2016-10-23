@@ -138,6 +138,7 @@
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Core\WindsorHttpControllerActivator.cs" />
     <Compile Include="Core\WindsorInstaller.cs" />
+    <Compile Include="Filters\FilterClass.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
