@@ -60,7 +60,7 @@ namespace OnlineStore.Business
         {
             return base.ExecuteWithExceptionHandledOperation(async () =>
             {
-                var product = await _.GetAsync(id);
+                var product = await _productRepository.GetAsync(id);
 
                 // prodcut entity sini product response a çeviriyoruz.
                 return Mapper.Map<ProductResponse>(product);
